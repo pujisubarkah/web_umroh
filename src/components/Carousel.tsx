@@ -22,15 +22,20 @@ export default function Carousel() {
 
   return (
     <div className="relative w-full overflow-hidden">
-      <div className="flex transition-transform duration-1000" style={{ transform: `translateX(-${current * 100}%)` }}>
+      <div
+        className="flex transition-transform duration-1000"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
         {banners.map((src, index) => (
-          <div key={index} className="w-full flex-shrink-0">
+          <div
+            key={index}
+            className="w-full flex-shrink-0 h-[50vh] relative"
+          >
             <Image
               src={src}
               alt={`Banner ${index + 1}`}
-              width={1600}
-              height={300}
-              className="w-full h-auto object-cover"
+              fill
+              className="object-cover"
               priority={index === 0}
             />
           </div>
@@ -44,7 +49,7 @@ export default function Carousel() {
             key={index}
             onClick={() => setCurrent(index)}
             className={clsx(
-              'w-3 h-3 rounded-full bg-gray-300',
+              'w-3 h-3 rounded-full bg-gray-300 transition-colors duration-300',
               current === index && 'bg-pink-500'
             )}
           />
