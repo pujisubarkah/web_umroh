@@ -3,6 +3,7 @@ import Profile from '@/components/Profile';
 import SpecialOffers from '@/components/SpecialOffers';
 import Offers from '@/components/Offers';
 import Packages from '@/components/Packages';
+import Apply from '@/components/Apply';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'; // Jangan lupa Navbar juga harus diimport
 import Chatbot from '@/components/Chatbot'; // Impor komponen Chatbot
@@ -24,6 +25,7 @@ export default function Home() {
         <SpecialOffers />
         <Offers />
         <Packages />
+        <Apply />
       </section>
       <div className="mt-4">
         <Footer />
