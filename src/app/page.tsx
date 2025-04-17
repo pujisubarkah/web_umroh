@@ -1,6 +1,7 @@
 import Carousel from '@/components/Carousel';
 import Profile from '@/components/Profile';
 import Offers from '@/components/Offers';
+import Packages from '@/components/Packages';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'; // Jangan lupa Navbar juga harus diimport
 import Chatbot from '@/components/Chatbot'; // Impor komponen Chatbot
@@ -20,6 +21,7 @@ export default function Home() {
       <section className="p-8">
         {/* Konten lainnya */}
         <Offers />
+        <Packages />
       </section>
       <div className="mt-4">
         <Footer />
