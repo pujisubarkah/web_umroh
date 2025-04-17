@@ -1,27 +1,31 @@
-import Navbar from '@/components/Navbar';
 import Carousel from '@/components/Carousel';
 import Profile from '@/components/Profile';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar'; // Jangan lupa Navbar juga harus diimport
+import Chatbot from '@/components/Chatbot'; // Impor komponen Chatbot
 
 export default function Home() {
   return (
     <main className="relative">
       <div className="sticky top-0 z-50">
-      <Navbar />
+        <Navbar />
       </div>
       <div className="mt-4">
-      <Carousel />
+        <Carousel />
       </div>
       <div className="mt-4">
-      <Profile />
+        <Profile />
       </div>
       <section className="p-8">
-      <h1 className="text-3xl font-bold">Selamat datang di Homepage!</h1>
-      <p className="mt-2 text-gray-600">Ini konten homepage kamu, gaskeun kustomisasi 🎨</p>
+        {/* Konten lainnya */}
       </section>
-
       <div className="mt-4">
-      <Footer />
+        <Footer />
+      </div>
+
+      {/* Tambahkan komponen Chatbot di sini */}
+      <div className="fixed bottom-0 right-0 m-4">
+        <Chatbot />
       </div>
     </main>
   );
