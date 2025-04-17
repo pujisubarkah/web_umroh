@@ -1,5 +1,6 @@
 import Carousel from '@/components/Carousel';
 import Profile from '@/components/Profile';
+import SpecialOffers from '@/components/SpecialOffers';
 import Offers from '@/components/Offers';
 import Packages from '@/components/Packages';
 import Footer from '@/components/Footer';
@@ -20,6 +21,7 @@ export default function Home() {
       </div>
       <section className="p-8">
         {/* Konten lainnya */}
+        <SpecialOffers />
         <Offers />
         <Packages />
       </section>
