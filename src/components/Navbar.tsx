@@ -30,8 +30,8 @@ const navItems = [
       label: 'Galeri & Artikel',
       hasDropdown: true,
       submenus: [
-        { label: 'Foto Perjalanan', href: '/galeri/foto' },
-        { label: 'Testimoni Jamaah', href: '/galeri/testimoni' },
+        { label: 'Foto Perjalanan', href: '/foto' },
+        { label: 'Testimoni Jamaah', href: '/testimoni' },
         { label: 'Artikel Islami', href: '/artikel' },
       ],
     },
@@ -39,8 +39,8 @@ const navItems = [
       label: 'Tentang Kami',
       hasDropdown: true,
       submenus: [
-        { label: 'Profil Perusahaan', href: '/tentang/profil' },
-        { label: 'Kontak', href: '/tentang/kontak' },
+        { label: 'Profil Perusahaan', href: '/about' },
+        { label: 'Kontak', href: '/kontak' },
       ],
     },
   ];
@@ -67,7 +67,7 @@ export default function Navbar() {
           {navItems.map((item) => (
             <li key={item.label} className="relative group">
               <button
-                className="flex items-center gap-1 hover:text-yellow-500 transition-colors"
+                className="flex items-center gap-1 hover:text-pink-500 transition-colors"
                 onClick={() => item.hasDropdown && handleDropdown(item.label)}
               >
                 {item.label}
@@ -76,7 +76,7 @@ export default function Navbar() {
 
               {/* Dropdown - Desktop */}
                 {item.hasDropdown && openDropdown === item.label && item.submenus && (
-                  <div className="absolute top-full left-0 bg-white shadow-md mt-2 w-56 rounded-lg z-10 p-2">
+                  <div className="absolute top-full left-0 bg-white shadow-md mt-2 w-56 rounded-lg p-2">
                     {item.submenus.map((sub) => (
                       <Link key={sub.label} href={sub.href} className="block px-4 py-2 hover:bg-gray-100">
                         {sub.label}

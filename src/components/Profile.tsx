@@ -15,8 +15,11 @@ const KisahPerjalanan = () => {
           <p className="text-gray-600 text-lg leading-relaxed">
             Sejak 2014, Khalifah Asia Tour & Travel hadir sebagai mitra terpercaya perjalanan Umrah dan Haji. Berizin resmi dan terakreditasi A, kami berkomitmen memberikan pelayanan terbaik untuk ibadah yang nyaman, aman, dan penuh keikhlasan.
           </p>
-          <button className="bg-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-600 transition">
-              Selengkapnya
+            <button
+            onClick={() => window.location.href = "/about"}
+            className="bg-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-600 transition"
+            >
+            Selengkapnya
             </button>
         </div>
 
