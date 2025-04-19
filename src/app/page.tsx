@@ -34,7 +34,7 @@ export default function Home() {
       </div>
 
       {/* Tambahkan komponen Chatbot di sini */}
-      <div className="fixed bottom-0 right-0 m-4 sticky top-0 z-50">
+      <div className="fixed bottom-0 right-0 m-4 z-50">
         <Chatbot />
       </div>
     </main>
