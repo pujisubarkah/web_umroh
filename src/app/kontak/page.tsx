@@ -2,6 +2,7 @@ import Carousel from '@/components/Carousel';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'; // Jangan lupa Navbar juga harus diimport
 import Chatbot from '@/components/Chatbot'; // Impor komponen Chatbot
+import Translator from '@/components/Translator'; // Impor komponen Translator
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
       <div className="fixed bottom-0 right-0 m-4 sticky top-0 z-100">
         <Chatbot />
       </div>
+      {/* Tambahkan komponen Translator di sini */}
+      <Translator />
     </main>
   );
 }
