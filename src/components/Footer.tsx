@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="flex-1 max-w-md">
           <h3 className="font-bold mb-2">PT Indonesia International Bussines, Khalifah Asia</h3>
           <p className="mb-2">Ruko Blossom Residence Jl. Prof. Dr. Hamka No.R-2 Gaga, Larangan, Tangerang, Banten 10110, Indonesia.</p>
-          <p className="mb-2">Telp: (021) 7313194</p>
+          <p className="mb-2">Telp: (021) 7313194<br />Email: cs@khalifahasia.co.id</p>
 
           <div className="mt-4">
             <p className="font-semibold mb-2">Ikuti media sosial kami di</p>
