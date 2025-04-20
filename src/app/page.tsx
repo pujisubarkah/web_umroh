@@ -8,6 +8,7 @@ import Blog from '@/components/BlogNews';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'; // Jangan lupa Navbar juga harus diimport
 import Chatbot from '@/components/Chatbot'; // Impor komponen Chatbot
+import Translator from '@/components/Translator'; // Impor komponen Translator
 
 export default function Home() {
   return (
@@ -37,6 +38,9 @@ export default function Home() {
       <div className="fixed bottom-0 right-0 m-4 z-50">
         <Chatbot />
       </div>
+      {/* Tambahkan komponen Translator di sini */}
+      <Translator />
+      
     </main>
   );
 }
