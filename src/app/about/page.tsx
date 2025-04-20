@@ -5,6 +5,7 @@ import Chatbot from '@/components/Chatbot'; // Impor komponen Chatbot
 import Translator from '@/components/Translator'; // Impor komponen Translator
 import Awards from './components/awards';
 import Boards from './components/boards';
+import Testimoni from '@/components/Testimonials'; // Impor komponen Testimoni
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         {/* Konten lainnya */}
         <Boards />
         <Awards />
+        <Testimoni />
       </section>
       <div className="mt-4">
         <Footer />
