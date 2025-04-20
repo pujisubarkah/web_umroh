@@ -59,20 +59,29 @@ export default function Navbar() {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-4">
-          <Image src="/logo.png" alt="Logo Indosat" width={120} height={120} />
+          <Image src="/logo.png" alt="Logo KhalifahAsia" width={120} height={120} />
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navItems.map((item) => (
             <li key={item.label} className="relative group">
-              <button
-                className="flex items-center gap-1 hover:text-pink-500 transition-colors"
-                onClick={() => item.hasDropdown && handleDropdown(item.label)}
-              >
-                {item.label}
-                {item.hasDropdown && <ChevronDown size={16} />}
-              </button>
+              {item.hasDropdown ? (
+                <button
+                  className="flex items-center gap-1 hover:text-pink-500 transition-colors"
+                  onClick={() => handleDropdown(item.label)}
+                >
+                  {item.label}
+                  <ChevronDown size={16} />
+                </button>
+              ) : (
+                <Link
+                  href={item.href || '#'}
+                  className="flex items-center gap-1 hover:text-pink-500 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )}
 
               {/* Dropdown - Desktop */}
                 {item.hasDropdown && openDropdown === item.label && item.submenus && (
