@@ -11,6 +11,7 @@ const navItems = [
     label: 'Paket Haji', href: '/haji',
      hasDropdown: true,
      submenus: [
+       { label: 'Paket Haji', href: '/haji' },
        { label: 'Haji Plus', href: '/haji/plus' },
        { label: 'Haji Furoda', href: '/haji/furoda' },
      ],
@@ -19,7 +20,8 @@ const navItems = [
     label: 'Paket Umroh', href : '/umroh',
     // hasDropdown: true,
     // submenus: [
-    //   { label: 'Umroh Hemat', href: '/umroh/hemat' },
+       { label: 'Paket Umroh', href: '/umroh' },
+       { label: 'Umroh Hemat', href: '/umroh/hemat' },
     //   { label: 'Umroh Reguler', href: '/umroh/reguler' },
     //   { label: 'Umroh Plus', href: '/umroh/plus' },
     // ],
