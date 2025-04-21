@@ -36,7 +36,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="bg-gray-900 text-black py-4 text-center text-xs">
+      <div className="bg-gray-900 text-white py-4 text-center text-xs">
         Khalifah Asia Tour & Travel © 2025 All Right Reserved
       </div>
     </footer>

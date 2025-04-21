@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'; // Jangan lupa Navbar juga harus diimport
 import Chatbot from '@/components/Chatbot'; // Impor komponen Chatbot
 import Translator from '@/components/Translator'; // Impor komponen Translator
+import Testimoni from '@/components/Testimonials'; // Impor komponen Testimoni
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       </div>
       <section className="p-8">
         {/* Konten lainnya */}
-        
+        <Testimoni />
       </section>
       <div className="mt-4">
         <Footer />
