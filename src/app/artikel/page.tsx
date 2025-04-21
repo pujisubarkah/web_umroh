@@ -22,7 +22,7 @@ export default function Home() {
       </div>
 
       {/* Tambahkan komponen Chatbot di sini */}
-      <div className="fixed bottom-0 right-0 m-4 sticky top-0 z-100">
+      <div className="fixed bottom-0 right-0 m-4 z-100">
         <Chatbot />
       </div>
       {/* Tambahkan komponen Translator di sini */}
