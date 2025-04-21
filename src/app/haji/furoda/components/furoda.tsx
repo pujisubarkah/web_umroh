@@ -5,7 +5,7 @@ const HajiFurodaSection = () => {
           <div className="w-full lg:w-1/2">
             <figure>
               <img
-                src="hajifuroda.jpg"
+                src="/hajifuroda.jpg"
                 alt="Haji Furoda"
                 className="rounded-lg shadow-lg w-full h-auto object-cover"
                 loading="lazy"
