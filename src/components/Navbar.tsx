@@ -8,39 +8,32 @@ import Link from 'next/link';
 const navItems = [
   { label: 'Beranda', href: '/' },
   {
-    label: 'Paket Haji',
-    hasDropdown: true,
-    submenus: [
-      { label: 'Haji Plus', href: '/hajiplus' },
-      { label: 'Haji Furoda', href: '/hajifuroda' },
-    ],
+    label: 'Paket Haji', href: '/haji',
+     hasDropdown: true,
+     submenus: [
+       { label: 'Haji Khusus', href: '/haji/khusus' },
+       { label: 'Haji Furoda', href: '/haji/furoda' },
+     ],
   },
   {
-    label: 'Paket Umroh',
-    hasDropdown: true,
-    submenus: [
-      { label: 'Umroh Hemat', href: '/umroh/hemat' },
-      { label: 'Umroh Reguler', href: '/umroh/reguler' },
-      { label: 'Umroh Plus', href: '/umroh/plus' },
-    ],
+    label: 'Paket Umroh', href : '/umroh',
+    // hasDropdown: true,
+    // submenus: [
+    //   { label: 'Umroh Hemat', href: '/umroh/hemat' },
+    //   { label: 'Umroh Reguler', href: '/umroh/reguler' },
+    //   { label: 'Umroh Plus', href: '/umroh/plus' },
+    // ],
   },
-  {
-    label: 'Pembiayaan',
-    hasDropdown: true,
-    submenus: [
-      { label: 'Pembiayaan Umroh', href: '/pembiayaan/umroh' },
-      { label: 'Pembiayaan Haji', href: '/pembiayaan/haji' },
-    ],
-  },
+  // {
+  //   label: 'Pembiayaan',
+  //   hasDropdown: true,
+  //   submenus: [
+  //     { label: 'Pembiayaan Umroh', href: '/pembiayaan/umroh' },
+  //     { label: 'Pembiayaan Haji', href: '/pembiayaan/haji' },
+  //   ],
+  // },
   { label: 'Kalkulator Umroh', href: '/kalkulator' },
-  {
-    label: 'Promo',
-    hasDropdown: true,
-    submenus: [
-      { label: 'Diskon Musim Haji', href: '/promo/haji' },
-      { label: 'Early Bird Umroh', href: '/promo/umroh' },
-    ],
-  },
+  { label: 'Promo', href: '/promo' },
   {
     label: 'Galeri & Artikel',
     hasDropdown: true,
