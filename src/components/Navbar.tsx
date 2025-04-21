@@ -18,13 +18,13 @@ const navItems = [
   },
   {
     label: 'Paket Umroh', href : '/umroh',
-    // hasDropdown: true,
+    hasDropdown: true,
     // submenus: [
        { label: 'Paket Umroh', href: '/umroh' },
        { label: 'Umroh Hemat', href: '/umroh/hemat' },
     //   { label: 'Umroh Reguler', href: '/umroh/reguler' },
     //   { label: 'Umroh Plus', href: '/umroh/plus' },
-    // ],
+     ],
   },
   // {
   //   label: 'Pembiayaan',
