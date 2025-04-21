@@ -22,7 +22,7 @@ const navItems = [
     submenus: [
        { label: 'Paket Umroh', href: '/umroh' },
        { label: 'Umroh Hemat', href: '/umroh/hemat' },
-    //   { label: 'Umroh Reguler', href: '/umroh/reguler' },
+       { label: 'Umroh Reguler', href: '/umroh/reguler' },
     //   { label: 'Umroh Plus', href: '/umroh/plus' },
      ],
   },
@@ -149,9 +149,16 @@ export default function Navbar() {
               {item.hasDropdown && openDropdown === item.label && (
                 <div className="absolute top-full left-0 bg-white shadow-md mt-2 w-56 rounded-lg p-2 z-40">
                   {item.submenus?.map((sub) => (
-                    <Link key={sub.label} href={sub.href} className="block px-4 py-2 hover:bg-gray-100">
+                    <Link
+                      key={sub.label}
+                      href={sub.href}
+                      className={`block px-4 py-2 hover:bg-gray-100 ${
+                      sub.label === 'Paket Haji' || sub.label === 'Paket Umroh' ? 'font-bold' : ''
+                  }`}
+                    >
                       {sub.label}
                     </Link>
+
                   ))}
                 </div>
               )}
@@ -189,9 +196,16 @@ export default function Navbar() {
               {item.hasDropdown && openDropdown === item.label && (
                 <div className="pl-4 mt-2 space-y-1">
                   {item.submenus?.map((sub) => (
-                    <Link key={sub.label} href={sub.href} className="block hover:text-yellow-600">
-                      {sub.label}
-                    </Link>
+                    <Link
+  key={sub.label}
+  href={sub.href}
+  className={`block px-4 py-2 hover:bg-gray-100 ${
+    sub.label === 'Paket Haji' || sub.label === 'Paket Umroh' ? 'font-bold' : ''
+  }`}
+>
+  {sub.label}
+</Link>
+
                   ))}
                 </div>
               )}
