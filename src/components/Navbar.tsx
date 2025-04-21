@@ -19,7 +19,7 @@ const navItems = [
   {
     label: 'Paket Umroh', href : '/umroh',
     hasDropdown: true,
-    // submenus: [
+    submenus: [
        { label: 'Paket Umroh', href: '/umroh' },
        { label: 'Umroh Hemat', href: '/umroh/hemat' },
     //   { label: 'Umroh Reguler', href: '/umroh/reguler' },
