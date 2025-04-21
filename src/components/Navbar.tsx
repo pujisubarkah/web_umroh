@@ -11,7 +11,7 @@ const navItems = [
     label: 'Paket Haji', href: '/haji',
      hasDropdown: true,
      submenus: [
-       { label: 'Haji Khusus', href: '/haji/khusus' },
+       { label: 'Haji Plus', href: '/haji/plus' },
        { label: 'Haji Furoda', href: '/haji/furoda' },
      ],
   },
