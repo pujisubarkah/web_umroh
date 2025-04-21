@@ -9,6 +9,45 @@ import Image from 'next/image';
 const dataPaket = [
   {
     id: 1,
+    title: 'PAKET UMROH PLUS THOIF',
+    harga: 25700000,
+    keberangkatan: '2025-04-09',
+    durasi: 9,
+    hotel: 3,
+    totalSeat: 50,
+    availableSeat: 40,
+    dari: 'JAKARTA',
+    maskapai: 'Garuda Indonesia',
+    image: '/umroh/6.jpg'
+  },
+  {
+    id: 2,
+    title: 'PAKET UMROH HEMAT NYAMAN',
+    harga: 25700000,
+    keberangkatan: '2025-04-09',
+    durasi: 9,
+    hotel: 3,
+    totalSeat: 50,
+    availableSeat: 40,
+    dari: 'JAKARTA',
+    maskapai: 'Garuda Indonesia',
+    image: '/umroh/7.jpg'
+  },
+  {
+    id: 3,
+    title: 'PAKET UMROH SUPER HEMAT',
+    harga: 25700000,
+    keberangkatan: '2025-04-09',
+    durasi: 9,
+    hotel: 3,
+    totalSeat: 50,
+    availableSeat: 40,
+    dari: 'JAKARTA',
+    maskapai: 'Garuda Indonesia',
+    image: '/umroh/8.jpg'
+  },
+  {
+    id: 4,
     title: 'PAKET UMROH HEMAT',
     harga: 25700000,
     keberangkatan: '2025-04-09',
@@ -21,7 +60,7 @@ const dataPaket = [
     image: '/umroh/1.jpg'
   },
   {
-    id: 2,
+    id: 5,
     title: 'PAKET UMROH PLUS TURKEY',
     harga: 39800000,
     keberangkatan: '2024-12-25',
@@ -34,7 +73,7 @@ const dataPaket = [
     image: '/umroh/2.jpg'
   },
   {
-    id: 3,
+    id: 6,
     title: 'PAKET UMROH 9 HARI A',
     harga: 29500000,
     keberangkatan: '2026-02-28',
@@ -47,7 +86,7 @@ const dataPaket = [
     image: '/umroh/3.jpg'
   },
   {
-    id: 4,
+    id: 7,
     title: 'PAKET UMROH 9 HARI B',
     harga: 31500000,
     keberangkatan: '2026-02-28',
@@ -60,7 +99,7 @@ const dataPaket = [
     image: '/umroh/4.jpg'
   },
   {
-    id: 5,
+    id: 8,
     title: 'PAKET UMROH RAMADHAN LAILATUL QADAR',
     harga: 43500000,
     keberangkatan: '2024-03-30',
