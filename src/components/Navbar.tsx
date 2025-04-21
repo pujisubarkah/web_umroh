@@ -92,7 +92,7 @@ export default function Navbar() {
         <Globe size={24} />
       </button>
       {languageDropdownOpen && (
-        <div className="absolute right-0 mt-2 w-32 bg-white shadow-lg rounded-lg p-2 z-50">
+        <div className="absolute right-0 mt-2 w-45 bg-white shadow-lg rounded-lg p-2 z-50">
           <button
             className="flex items-center gap-2 w-full px-4 py-2 hover:bg-gray-100"
             onClick={() => changeLanguage('id')}
