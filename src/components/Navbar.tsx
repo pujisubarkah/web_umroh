@@ -1,57 +1,84 @@
 'use client';
+
 import { useState } from 'react';
 import { ChevronDown, Search, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const navItems = [
-    {
-      label: 'Beranda',
-      href: '/',
-    },
-    {
-      label: 'Paket Haji & Umroh',
-      hasDropdown: true,
-      submenus: [
-        { label: 'Paket Reguler', href: '/paket/reguler' },
-        { label: 'Paket VIP', href: '/paket/vip' },
-        { label: 'Paket Ramadhan', href: '/paket/ramadhan' },
-      ],
-    },
-    {
-      label: 'Promo',
-      hasDropdown: true,
-      submenus: [
-        { label: 'Diskon Musim Haji', href: '/promo/haji' },
-        { label: 'Early Bird Umroh', href: '/promo/umroh' },
-      ],
-    },
-    {
-      label: 'Galeri & Artikel',
-      hasDropdown: true,
-      submenus: [
-        { label: 'Foto Perjalanan', href: '/foto' },
-        { label: 'Testimoni Jamaah', href: '/testimoni' },
-        { label: 'Artikel Islami', href: '/artikel' },
-      ],
-    },
-    {
-      label: 'Tentang Kami',
-      hasDropdown: true,
-      submenus: [
-        { label: 'Profil Perusahaan', href: '/about' },
-        { label: 'Kontak', href: '/kontak' },
-      ],
-    },
-  ];
-  
+  {
+    label: 'Beranda',
+    href: '/',
+  },
+  {
+    label: 'Paket Haji',
+    hasDropdown: true,
+    submenus: [
+      { label: 'Haji Plus', href: '/hajiplus' },
+      { label: 'Haji Furoda', href: '/hajifuroda' },
+    ],
+  },
+  {
+    label: 'Paket Umroh',
+    hasDropdown: true,
+    submenus: [
+      { label: 'Umroh Hemat', href: '/umroh/hemat' },
+      { label: 'Umroh Reguler', href: '/umroh/reguler' },
+      { label: 'Umroh Plus', href: '/umroh/plus' },
+    ],
+  },
+  {
+    label: 'Pembiayaan',
+    hasDropdown: true,
+    submenus: [
+      { label: 'Pembiayaan Umroh', href: '/pembiayaan/umroh' },
+      { label: 'Pembiayaan Haji', href: '/pembiayaan/haji' },
+    ],
+  },
+  {
+    label: 'Kalkulator Umroh',
+    href: '/kalkulator',
+  },
+  {
+    label: 'Promo',
+    hasDropdown: true,
+    submenus: [
+      { label: 'Diskon Musim Haji', href: '/promo/haji' },
+      { label: 'Early Bird Umroh', href: '/promo/umroh' },
+    ],
+  },
+  {
+    label: 'Galeri & Artikel',
+    hasDropdown: true,
+    submenus: [
+      { label: 'Foto Perjalanan', href: '/foto' },
+      { label: 'Testimoni Jamaah', href: '/testimoni' },
+      { label: 'Artikel Islami', href: '/artikel' },
+    ],
+  },
+  {
+    label: 'Tentang Kami',
+    hasDropdown: true,
+    submenus: [
+      { label: 'Profil Perusahaan', href: '/about' },
+      { label: 'Kontak', href: '/kontak' },
+    ],
+  },
+];
 
 export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [language, setLanguage] = useState('id'); // Default language
 
   const handleDropdown = (label: string) => {
     setOpenDropdown(openDropdown === label ? null : label);
+  };
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    // Implement your language change logic here
+    console.log(`Language changed to: ${lang}`);
   };
 
   return (
@@ -59,7 +86,15 @@ export default function Navbar() {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-4">
-          <Image src="/logo.png" alt="Logo KhalifahAsia" width={120} height={120} />
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="Logo KhalifahAsia"
+              width={120}
+              height={120}
+              className="cursor-pointer transition-transform duration-300 hover:scale-105"
+            />
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -70,6 +105,8 @@ export default function Navbar() {
                 <button
                   className="flex items-center gap-1 hover:text-pink-500 transition-colors"
                   onClick={() => handleDropdown(item.label)}
+                  aria-haspopup="true"
+                  aria-expanded={openDropdown === item.label ? 'true' : 'false'}
                 >
                   {item.label}
                   <ChevronDown size={16} />
@@ -84,22 +121,30 @@ export default function Navbar() {
               )}
 
               {/* Dropdown - Desktop */}
-                {item.hasDropdown && openDropdown === item.label && item.submenus && (
-                  <div className="absolute top-full left-0 bg-white shadow-md mt-2 w-56 rounded-lg p-2">
-                    {item.submenus.map((sub) => (
-                      <Link key={sub.label} href={sub.href} className="block px-4 py-2 hover:bg-gray-100">
-                        {sub.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-
+              {item.hasDropdown && openDropdown === item.label && item.submenus && (
+                <div className="absolute top-full left-0 bg-white shadow-md mt-2 w-56 rounded-lg p-2">
+                  {item.submenus.map((sub) => (
+                    <Link key={sub.label} href={sub.href} className="block px-4 py-2 hover:bg-gray-100">
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </li>
           ))}
         </ul>
 
-        {/* Search & Mobile Toggle */}
+        {/* Translator + Search + Mobile Toggle */}
         <div className="flex items-center gap-4">
+          <button onClick={() => changeLanguage(language === 'id' ? 'en' : 'id')} className="flex items-center">
+            <Image
+              src={language === 'id' ? '/flag-id.png' : '/flag-en.png'}
+              alt="Change Language"
+              width={24}
+              height={24}
+              className="cursor-pointer"
+            />
+          </button>
           <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
             <Search size={20} />
           </button>
@@ -115,27 +160,51 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <ul className="md:hidden mt-4 space-y-2 text-sm font-medium">
+          <li className="border-b pb-2">
+            {/* Translator added to the mobile menu */}
+            <div className="flex items-center gap-4">
+              <button onClick={() => changeLanguage(language === 'id' ? 'en' : 'id')} className="flex items-center">
+                <Image
+                  src={language === 'id' ? '/flag-id.png' : '/flag-en.png'}
+                  alt="Change Language"
+                  width={24}
+                  height={24}
+                  className="cursor-pointer"
+                />
+              </button>
+              <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                <Search size={20} />
+              </button>
+              <button
+                className="md:hidden p-2"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+          </li>
           {navItems.map((item) => (
             <li key={item.label} className="border-b pb-2">
               <button
                 className="flex justify-between w-full text-left"
                 onClick={() => item.hasDropdown && handleDropdown(item.label)}
+                aria-haspopup="true"
+                aria-expanded={openDropdown === item.label ? 'true' : 'false'}
               >
                 {item.label}
                 {item.hasDropdown && <ChevronDown size={16} />}
               </button>
 
               {/* Dropdown - Mobile */}
-                {item.hasDropdown && openDropdown === item.label && item.submenus && (
-                  <div className="pl-4 mt-2 space-y-1">
-                    {item.submenus.map((sub) => (
-                      <Link key={sub.label} href={sub.href} className="block hover:text-yellow-600">
-                        {sub.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-
+              {item.hasDropdown && openDropdown === item.label && item.submenus && (
+                <div className="pl-4 mt-2 space-y-1">
+                  {item.submenus.map((sub) => (
+                    <Link key={sub.label} href={sub.href} className="block hover:text-yellow-600">
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </li>
           ))}
         </ul>
