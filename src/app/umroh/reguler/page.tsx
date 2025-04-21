@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'; // Jangan lupa Navbar juga harus diimport
 import Chatbot from '@/components/Chatbot'; // Impor komponen Chatbot
 import Translator from '@/components/Translator'; // Impor komponen Translator
-import UmrohContent from './components/hemat'; // Impor konten Umroh
+import UmrohContent from './components/reguler'; // Impor konten Umroh
 
 export default function Home() {
   return (
