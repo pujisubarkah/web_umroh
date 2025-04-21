@@ -51,7 +51,7 @@ export default function UmrohPage() {
                             <figure className="relative">
                                 <img src={item.img} alt={item.title} className="w-full h-44 object-cover" />
                                 <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs px-2 py-0.5 rounded-md font-semibold shadow">
-                                    UMROH
+                                    UMROH HEMAT
                                 </span>
                             </figure>
                             <div className="p-4 flex flex-col flex-grow">
