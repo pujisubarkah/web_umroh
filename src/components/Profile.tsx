@@ -7,12 +7,13 @@ const KisahPerjalanan = () => {
     <section className="bg-white py-12 px-6 md:px-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 relative">
         {/* Text Content */}
-        <div className="md:w-1/2 space-y-6 z-10">
         <img
             src="/logo_without_text.png"
             alt="Logo Background"
-            className="absolute -top-20 -left-20 w-40 md:w-48 opacity-30 z-0"
+            className="absolute -top-10 -left-10 w-40 md:w-48 opacity-30 z-0"
           />
+        <div className="md:w-1/2 space-y-6 z-10">
+        
           <h2 className="text-3xl md:text-4xl font-bold text-gray-700 leading-snug">
             Menapaki Perjalanan Suci <br />
             Solusi Haji & Umroh <br />
