@@ -9,6 +9,7 @@ const banners = [
   '/banner/Banner1.jpg',
   '/banner/Banner2.jpg',
   '/banner/Banner3.jpg',
+  '/banner/Banner4.jpeg'
 ];
 
 export default function Carousel() {
