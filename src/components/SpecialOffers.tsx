@@ -50,7 +50,7 @@ export default function PackagesCard() {
             <div key={index} className="border rounded-2xl overflow-hidden shadow-lg flex flex-col">
               {/* Gambar */}
               <div
-              className="h-48 w-full relative cursor-pointer"
+              className="h-100 w-full relative cursor-pointer"
               onClick={() => window.open(item.image, '_blank')}
               >
               <Image
